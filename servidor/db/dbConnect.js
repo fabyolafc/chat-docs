@@ -1,8 +1,9 @@
 import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
 
-const cliente = new MongoClient(
-  "mongodb+srv://root:root123@socket.j3dqxsy.mongodb.net/"
-);
+dotenv.config();
+
+const cliente = new MongoClient(process.env.MONGODB_URI);
 
 let documentosColecao, usuariosColecao;
 

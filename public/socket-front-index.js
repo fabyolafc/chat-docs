@@ -8,8 +8,16 @@ const socket = io("/usuarios", {
 });
 
 socket.on("connect_error", (erro) => {
-  alert(erro);
-  window.location.href = "/login/index.html";
+  Toastify({
+    text: erro.toString(),
+    duration: 3000,
+    gravity: "top",
+    position: "right",
+    backgroundColor: "#dc3545",
+  }).showToast();
+  setTimeout(() => {
+    window.location.href = "/login/index.html";
+  }, 1500);
 });
 
 socket.emit("obter_documentos", (documentos) => {
@@ -27,7 +35,13 @@ socket.on("adicionar_documento_interface", (nome) => {
 });
 
 socket.on("documento_existente", (nome) => {
-  alert(`O documento ${nome} já existe!`);
+  Toastify({
+    text: `O documento ${nome} já existe!`,
+    duration: 3000,
+    gravity: "top",
+    position: "right",
+    backgroundColor: "#ffc107",
+  }).showToast();
 });
 
 socket.on("excluir_documento_sucesso", (nome) => {

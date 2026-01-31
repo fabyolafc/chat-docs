@@ -45,8 +45,16 @@ botaoExcluir.addEventListener("click", () => {
 
 function alertarERedirecionar(nome) {
   if (nome === nomeDocumento) {
-    alert(`Documento ${nome} excluído!`);
-    window.location.href = "/";
+    Toastify({
+      text: `Documento ${nome} excluído!`,
+      duration: 2000,
+      gravity: "top",
+      position: "right",
+      backgroundColor: "#28a745",
+    }).showToast();
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 2000);
   }
 }
 

@@ -12,8 +12,16 @@ const botaoLogout = document.getElementById("botao-logout");
 
 botaoLogout.addEventListener("click", () => {
   removerCookie("tokenJwt");
-  alert("Usuário deslogado com sucesso!");
-  window.location.href = "/login/index.html";
+  Toastify({
+    text: "Usuário deslogado com sucesso!",
+    duration: 2000,
+    gravity: "top",
+    position: "right",
+    backgroundColor: "#28a745",
+  }).showToast();
+  setTimeout(() => {
+    window.location.href = "/login/index.html";
+  }, 2000);
 });
 
 form.addEventListener("submit", (evento) => {

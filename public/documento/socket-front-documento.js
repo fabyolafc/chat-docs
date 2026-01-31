@@ -15,8 +15,16 @@ const socket = io("/usuarios", {
 socket.on("autorizacao_sucesso", tratarAutorizacaoSucesso);
 
 socket.on("connect_error", (erro) => {
-  alert(erro);
-  window.location.href = "/login/index.html";
+  Toastify({
+    text: erro.toString(),
+    duration: 3000,
+    gravity: "top",
+    position: "right",
+    backgroundColor: "#dc3545",
+  }).showToast();
+  setTimeout(() => {
+    window.location.href = "/login/index.html";
+  }, 1500);
 });
 
 function selecionarDocumento(dadosEntrada) {
@@ -26,8 +34,16 @@ function selecionarDocumento(dadosEntrada) {
 }
 
 socket.on("usuario_ja_no_documento", () => {
-  alert("Documento já aberto em outra página.");
-  window.location.href = "/";
+  Toastify({
+    text: "Documento já aberto em outra página.",
+    duration: 3000,
+    gravity: "top",
+    position: "right",
+    backgroundColor: "#ffc107",
+  }).showToast();
+  setTimeout(() => {
+    window.location.href = "/";
+  }, 2000);
 });
 
 socket.on("usuarios_no_documento", atualizarInterfaceUsuarios);

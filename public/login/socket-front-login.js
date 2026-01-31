@@ -9,11 +9,35 @@ function emitirAutenticarUsuario(dados) {
 socket.on("autenticacao_sucesso", (tokenJwt) => {
   definirCookie("tokenJwt", tokenJwt);
 
-  alert("Usuário autenticado com sucesso!");
-  window.location.href = "/";
+  Toastify({
+    text: "Usuário autenticado com sucesso!",
+    duration: 2000,
+    gravity: "top",
+    position: "right",
+    backgroundColor: "#28a745",
+  }).showToast();
+  setTimeout(() => {
+    window.location.href = "/";
+  }, 2000);
 });
 
-socket.on("autenticacao_erro", () => alert("Erro na autenticação."));
-socket.on("usuario_nao_encontrado", () => alert("Usuário não encontrado."));
+socket.on("autenticacao_erro", () => {
+  Toastify({
+    text: "Erro na autenticação.",
+    duration: 3000,
+    gravity: "top",
+    position: "right",
+    backgroundColor: "#dc3545",
+  }).showToast();
+});
+socket.on("usuario_nao_encontrado", () => {
+  Toastify({
+    text: "Usuário não encontrado.",
+    duration: 3000,
+    gravity: "top",
+    position: "right",
+    backgroundColor: "#dc3545",
+  }).showToast();
+});
 
 export { emitirAutenticarUsuario };

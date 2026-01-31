@@ -33,6 +33,10 @@ header h1 i {
   border: 1px solid #d63384 !important;
 }
 
+#botao-logout:hover {
+  color: #fff !important;
+}
+
 body {
   background: linear-gradient(135deg, #ffe4ec, #fdf0f5);
   color: #333;
@@ -189,7 +193,7 @@ a:hover {
 
 .footer-socials a:hover {
   background: linear-gradient(135deg, #d63384, #e84d9a);
-  color: #fff;
+  color: #fff !important;
   transform: translateY(-4px) scale(1.12);
   box-shadow: 0 12px 26px rgba(214, 51, 132, 0.45);
 }

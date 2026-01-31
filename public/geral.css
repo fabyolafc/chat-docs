@@ -37,6 +37,16 @@ header h1 i {
   color: #fff !important;
 }
 
+.image-main {
+  display: block;
+  margin: 0 auto 24px;
+  max-width: 100%;
+  width: 450px;
+  height: auto;
+  border-radius: 16px;
+  padding: 0 20px;
+}
+
 body {
   background: linear-gradient(135deg, #ffe4ec, #fdf0f5);
   color: #333;
@@ -55,6 +65,7 @@ main {
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 6px 20px rgba(214, 51, 132, 0.15);
+  margin: 40px 0;
 }
 
 .form-control {
@@ -214,11 +225,21 @@ a:hover {
     margin: 16px auto 0;
   }
 
+  .image-main {
+    width: 350px;
+  }
+
   body {
     padding: 10px;
   }
 
   main {
     padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-main {
+    width: 250px;
   }
 }

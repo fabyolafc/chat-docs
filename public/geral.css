@@ -17,20 +17,20 @@ header h1 {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  color: #d63384;
+  color: #d63384 !important;
   font-weight: 700;
   margin: 0;
 }
 
 header h1 i {
   font-size: 2.2rem;
-  color: #e84d9a;
+  color: #e84d9a !important;
 }
 
 #botao-logout {
   border-radius: 14px;
   font-size: 0.9rem;
-  border: 1px solid #d63384;
+  border: 1px solid #d63384 !important;
 }
 
 body {
@@ -42,7 +42,7 @@ body {
 }
 
 h1, h2 {
-  color: #d63384;
+  color: #d63384 !important;
   font-weight: 700;
 }
 
@@ -59,19 +59,19 @@ main {
 }
 
 .form-control:focus {
-  border-color: #d63384;
-  box-shadow: 0 0 0 0.2rem rgba(214, 51, 132, 0.25);
+  border-color: #d63384 !important;
+  box-shadow: 0 0 0 0.2rem rgba(214, 51, 132, 0.25) !important;
 }
 
 .btn-primary {
-  background-color: #d63384;
+  background-color: #d63384 !important;
   border: none;
   border-radius: 14px;
   font-weight: 600;
 }
 
 .btn-primary:hover {
-  background-color: #ad296a;
+  background-color: #ad296a !important;
 }
 
 .btn-outline-danger {
@@ -80,22 +80,22 @@ main {
 
 .btn-outline-primary {
   border-radius: 14px;
-  border-color: #d63384;
-  color: #d63384;
+  border-color: #d63384 !important;
+  color: #d63384 !important;
 }
 
 .btn-outline-primary:hover {
-  background-color: #d63384;
+  background-color: #d63384 !important;
   color: #fff;
 }
 
 a {
-  color: #d63384;
+  color: #d63384 !important;
   font-weight: 500;
 }
 
 a:hover {
-  color: #ad296a;
+  color: #ad296a !important;
 }
 
 #lista-documentos {
@@ -110,24 +110,24 @@ a:hover {
   border-radius: 18px;
   text-decoration: none;
   color: #333;
-  box-shadow: 0 4px 10px rgba(214, 51, 132, 0.15);
+  box-shadow: 0 4px 10px rgba(214, 51, 132, 0.15) !important;
   transition: all 0.2s ease;
   position: relative;
 }
 
 #lista-documentos a:hover {
-  background-color: #fff0f6;
+  background-color: #fff0f6 !important;
   transform: translateY(-2px);
 }
 
 #editor-texto {
   border-radius: 16px;
-  border: 1px solid #f3b6cc;
+  border: 1px solid #f3b6cc !important;
   box-shadow: 0 4px 10px rgba(214, 51, 132, 0.15);
 }
 
 #editor-texto:focus {
-  border-color: #d63384;
+  border-color: #d63384 !important;
   box-shadow: 0 0 0 0.2rem rgba(214, 51, 132, 0.25);
 }
 
@@ -153,7 +153,7 @@ a:hover {
   text-align: center;
   backdrop-filter: blur(12px);
   border-top: 1px solid rgba(214, 51, 132, 0.25);
-  color: #d63384;
+  color: #d63384 !important;
 }
 
 .footer-copy {
@@ -176,7 +176,7 @@ a:hover {
   justify-content: center;
   background: linear-gradient(135deg, #ffffff, #ffe3ef);
   border-radius: 50%;
-  color: #d63384;
+  color: #d63384 !important;
   font-size: 1.25rem;
   box-shadow:
     0 6px 14px rgba(214, 51, 132, 0.35),

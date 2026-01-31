@@ -30,4 +30,5 @@ O projeto permite criar, editar e gerenciar documentos de forma simples, moderna
 ### Back-end
 - Node.js
 - Express
+- MongoDB
 - Socket.IO
